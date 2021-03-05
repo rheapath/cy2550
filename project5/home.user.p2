@@ -1,17 +1,20 @@
-# Last Modified: Mon Oct 12 22:26:24 2020
+# Last Modified: Fri Mar  5 13:02:19 2021
 #include <tunables/global>
 
 /home/rheapathak/p2 flags=(audit) {
   #include <abstractions/base>
-  /home/rheapathak/p2 mrw,
-  /tmp/* rw,
-  /home/rheapathak/.project5/config w,
-  /var/log/syslog r,
-  /etc/timezone r,
-  /proc/uptime r,
-  /etc/hostid r,
-  /etc/passwd r,
-  /etc/hosts r,
-  /home/rheapathak/template r,
-  network inet tcp,
+  #include <abstractions/user-tmp>
+  network tcp,
+  /home/rheapathak/p2 mr,
+  /home/rheapathak/.project2/config rwm,
+  /var/log/syslog rw,
+  /etc/timezone rw,
+  /proc/uptime rw,
+  /etc/hostid rw,
+  /etc/passwd rw,
+  /etc/hosts rw,
+  /home/rheapathak/template rwm,
+  deny @{PROC}/meminfo r,
+  deny @{PROC}/stat r,
+
 }
