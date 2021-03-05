@@ -1,0 +1,17 @@
+# Last Modified: Mon Oct 12 22:26:24 2020
+#include <tunables/global>
+
+/home/rheapathak/p2 flags=(audit) {
+  #include <abstractions/base>
+  /home/rheapathak/p2 mrw,
+  /tmp/* rw,
+  /home/rheapathak/.project5/config w,
+  /var/log/syslog r,
+  /etc/timezone r,
+  /proc/uptime r,
+  /etc/hostid r,
+  /etc/passwd r,
+  /etc/hosts r,
+  /home/rheapathak/template r,
+  network inet tcp,
+}

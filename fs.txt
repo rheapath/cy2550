@@ -1,0 +1,9 @@
+chmod g+w /etc/apt/sources.list
+chmod 755 /bin/bash
+chmod o-w /usr/local/bin
+chmod go=rx /usr/sbin/adduser
+chmod go-w /home/bob
+chmod go-w /usr/bin/passwd
+chmod g+x /etc/ssl/private
+chown :root /var/log/apt
+chmod go-w /usr/bin/ls
